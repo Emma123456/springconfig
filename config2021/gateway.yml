@@ -8,6 +8,12 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes: # 可以配置多个路由
+        - id: service-user-1 # 路由id唯一
+          uri: lb://user # 可以直接跳转到具体的地址，如果要跳转到其他服务，则填写lb://<服务id>
+          predicates:
+            - Path=/user/** # 路由规则
+          
 logging:
   level:
     org.springframework.cloud.gateway: trace
