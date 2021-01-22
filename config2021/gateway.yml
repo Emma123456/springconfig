@@ -8,8 +8,7 @@ spring:
       discovery:
         locator:
           enabled: true
-          #lowerCaseServiceId: true
-      
+          #lowerCaseServiceId: true      
           
 logging:
   level:
